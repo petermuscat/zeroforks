@@ -64,23 +64,23 @@
   margin-bottom: 100px;
 }
 
-/*===== NAVBAR TWO =====*/
-.navbar-area.navbar-two {
-  background-color: var(--light-2);
+/*===== NAVBAR ONE =====*/
+.navbar-one {
+  background: var(--primary);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two {
+  .navbar-one {
     padding: 20px 0;
   }
 }
-.navbar-area.navbar-two .navbar {
+.navbar-one .navbar {
   position: relative;
   padding: 0;
 }
-.navbar-area.navbar-two .navbar .navbar-toggler .toggler-icon {
+.navbar-one .navbar .navbar-toggler .toggler-icon {
   width: 30px;
   height: 2px;
-  background-color: var(--black);
+  background-color: var(--white);
   margin: 5px 0;
   display: block;
   position: relative;
@@ -90,7 +90,7 @@
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
-.navbar-area.navbar-two .navbar .navbar-toggler.active .toggler-icon:nth-of-type(1) {
+.navbar-one .navbar .navbar-toggler.active .toggler-icon:nth-of-type(1) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -98,10 +98,10 @@
   transform: rotate(45deg);
   top: 7px;
 }
-.navbar-area.navbar-two .navbar .navbar-toggler.active .toggler-icon:nth-of-type(2) {
+.navbar-one .navbar .navbar-toggler.active .toggler-icon:nth-of-type(2) {
   opacity: 0;
 }
-.navbar-area.navbar-two .navbar .navbar-toggler.active .toggler-icon:nth-of-type(3) {
+.navbar-one .navbar .navbar-toggler.active .toggler-icon:nth-of-type(3) {
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
@@ -110,26 +110,27 @@
   top: -7px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-collapse {
+  .navbar-one .navbar .navbar-collapse {
     position: absolute;
     top: 140%;
     left: 0;
     width: 100%;
-    background-color: var(--light-2);
+    background-color: var(--primary);
     z-index: 8;
     padding: 10px 0;
+    border-radius: 0 0 5px 5px;
   }
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item {
-  margin: 0 12px;
+.navbar-one .navbar .navbar-nav .nav-item {
+  margin: 0 5px;
   position: relative;
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item a {
+.navbar-one .navbar .navbar-nav .nav-item a {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  padding: 28px 8px;
-  color: var(--dark-2);
+  padding: 28px 15px;
+  color: var(--white);
   text-transform: capitalize;
   position: relative;
   display: flex;
@@ -141,110 +142,63 @@
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item a::before {
+.navbar-one .navbar .navbar-nav .nav-item a::before {
   position: absolute;
   content: "";
   left: 0;
   bottom: 0;
-  height: 3px;
+  height: 100%;
   width: 0%;
-  background-color: var(--primary);
+  background-color: var(--white);
   opacity: 0;
   visibility: hidden;
+  z-index: -1;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  z-index: -1;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item a::before {
-    height: 100%;
-  }
+.navbar-one .navbar .navbar-nav .nav-item a.active::before {
+  opacity: 0.1;
+  visibility: visible;
+  width: 100%;
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item a i {
+.navbar-one .navbar .navbar-nav .nav-item a:hover::before {
+  opacity: 0.1;
+  visibility: visible;
+  width: 100%;
+}
+.navbar-one .navbar .navbar-nav .nav-item a i {
   font-weight: 700;
   padding-left: 8px;
   font-size: 14px;
-  color: var(--dark-2);
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-}
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item a:hover i {
-  color: var(--white);
-}
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item a.active:hover i {
-  color: var(--primary);
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item a.active:hover i {
-    color: var(--white);
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item a {
+  .navbar-one .navbar .navbar-nav .nav-item a {
     padding: 10px 10px;
     display: block;
   }
-}
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item a.active {
-  color: var(--primary);
-}
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item a.active::before {
-  opacity: 1;
-  visibility: visible;
-  width: 100%;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item a.active {
-    color: var(--white);
-  }
-}
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item a.active i {
-  color: var(--primary);
-}
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item a.active i {
-    color: var(--white);
-  }
-}
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item:hover a {
-  color: var(--primary);
-}
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item:hover a {
-    color: var(--white);
-  }
-}
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item:hover a::before {
-  opacity: 1;
-  visibility: visible;
-  width: 100%;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item:hover a i {
-    color: var(--white);
+  .navbar-one .navbar .navbar-nav .nav-item a::before {
+    border-radius: 5px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item {
+  .navbar-one .navbar .navbar-nav .nav-item {
     margin-bottom: 5px;
   }
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item:last-child {
+  .navbar-one .navbar .navbar-nav .nav-item:last-child {
     margin-bottom: 0;
   }
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu {
+.navbar-one .navbar .navbar-nav .nav-item .sub-menu {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 100%;
   width: 260px;
   background-color: var(--white);
   box-shadow: var(--shadow-4);
+  border-radius: 5px;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.3s ease-out 0s;
@@ -256,7 +210,7 @@
   padding: 10px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu {
+  .navbar-one .navbar .navbar-nav .nav-item .sub-menu {
     position: relative !important;
     width: 100% !important;
     left: 0 !important;
@@ -280,25 +234,30 @@
     height: 0;
   }
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu.collapse:not(.show) {
+.navbar-one .navbar .navbar-nav .nav-item .sub-menu.collapse:not(.show) {
   height: auto;
   display: block;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu.collapse:not(.show) {
+  .navbar-one .navbar .navbar-nav .nav-item .sub-menu.collapse:not(.show) {
     height: 0;
     display: none;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu.show {
+  .navbar-one .navbar .navbar-nav .nav-item .sub-menu.show {
     height: auto;
   }
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu li {
+.navbar-one .navbar .navbar-nav .nav-item .sub-menu li {
   position: relative;
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu li a {
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .navbar-one .navbar .navbar-nav .nav-item .sub-menu li a {
+    border-radius: 5px !important;
+  }
+}
+.navbar-one .navbar .navbar-nav .nav-item .sub-menu li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -313,90 +272,610 @@
   transition: all 0.3s ease-out 0s;
   z-index: 5;
   text-transform: capitalize;
+  border-radius: 5px;
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu li a:hover {
+.navbar-one .navbar .navbar-nav .nav-item .sub-menu li a:hover {
   background-color: var(--primary);
   color: var(--white);
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu li a::before {
+.navbar-one .navbar .navbar-nav .nav-item .sub-menu li a::before {
   display: none;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu li a:hover {
-    background-color: var(--primary);
+  .navbar-one .navbar .navbar-nav .nav-item .sub-menu li a:hover {
+    background-color: var(--primary-dark);
     color: var(--white);
   }
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu li a i {
-    color: var(--primary);
+  .navbar-one .navbar .navbar-nav .nav-item .sub-menu li a i {
+    color: var(--primary-dark);
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
   }
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu li a:hover i {
+  .navbar-one .navbar .navbar-nav .nav-item .sub-menu li a:hover i {
     color: var(--white);
   }
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu li a i {
+.navbar-one .navbar .navbar-nav .nav-item .sub-menu li a i {
   font-size: 14px;
   font-weight: 700;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu li a i {
+  .navbar-one .navbar .navbar-nav .nav-item .sub-menu li a i {
     display: none;
   }
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu li a .sub-nav-toggler i {
+.navbar-one .navbar .navbar-nav .nav-item .sub-menu li a .sub-nav-toggler i {
   display: inline-block;
 }
-.navbar-area.navbar-two .navbar .navbar-nav .nav-item .sub-menu li .sub-menu {
+.navbar-one .navbar .navbar-nav .nav-item .sub-menu li .sub-menu {
   right: auto;
   left: 100%;
   top: 0;
   opacity: 0;
   visibility: hidden;
- </style>
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 1400px) {
+  .navbar-one .navbar .navbar-nav .nav-item .sub-menu li .sub-menu {
+    margin-left: 10px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .navbar-one .navbar .navbar-nav .nav-item .sub-menu li .sub-menu {
+    padding-left: 30px;
+    height: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .navbar-one .navbar .navbar-nav .nav-item .sub-menu li .sub-menu.show {
+    visibility: visible;
+    height: auto;
+    position: relative;
+  }
+}
+.navbar-one .navbar .navbar-nav .nav-item .sub-menu li:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+.navbar-one .navbar .navbar-nav .nav-item:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .navbar-one .navbar .navbar-nav .nav-item .sub-nav-toggler {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 14px;
+    font-size: 16px;
+    background: none;
+    border: 0;
+    color: var(--white);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-one .navbar .navbar-btn {
+    position: absolute;
+    right: 70px;
+    top: 3px;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-one .navbar .navbar-btn {
+    position: absolute;
+    right: 60px;
+    top: 3px;
+  }
+}
+.navbar-one .navbar .navbar-btn ul {
+  display: flex;
+}
+.navbar-one .navbar .navbar-btn ul li {
+  display: inline-block;
+  margin-right:,/* ===== Buttons Css ===== */
+.header-four .primary-btn {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: var(--shadow-2);
+}
+.header-four .active.primary-btn, .header-four .primary-btn:hover, .header-four .primary-btn:focus {
+  background: var(--primary-dark);
+  color: var(--white);
+  box-shadow: var(--shadow-4);
+}
+.header-four .deactive.primary-btn {
+  background: var(--gray-4);
+  color: var(--dark-3);
+  pointer-events: none;
+}
+
+/*===== HEADER FOUR =====*/
+.header-four {
+  position: relative;
+}
+.header-four .header-content-area {
+  background: -webkit-linear-gradient(#deebfd 0%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(#deebfd 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(#deebfd 0%, rgba(255, 255, 255, 0) 100%);
+}
+.header-four .header-content {
+  padding-top: 220px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .header-four .header-content {
+    padding-top: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .header-four .header-content {
+    padding-top: 120px;
+  }
+}
+.header-four .header-title {
+  font-size: 44px;
+  line-height: 55px;
+  color: var(--black);
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .header-four .header-title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .header-four .header-title {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+.header-four .text {
+  color: var(--dark-3);
+  margin-top: 8px;
+}
+.header-four .header-newsletter {
+  max-width: 410px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.header-four .header-newsletter i {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  font-size: 24px;
+  color: var(--primary);
+}
+.header-four .header-newsletter input {
+  width: 100%;
+  height: 48px;
+  padding-left: 60px;
+  padding-right: 30px;
+  border-radius: 50px;
+  border: 2px solid var(--light-3);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-3);
+  padding-right: 170px;
+}
+.header-four .header-newsletter input:focus {
+  border-color: var(--primary);
+}
+.header-four .header-newsletter .header-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.header-four .header-image {
+  text-align: center;
+  padding-top: 80px;
+}
+.header-four .header-image img {
+  max-width: 700px;
+}
+@media (max-width: 767px) {
+  .header-four .header-image {
+    padding-top: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header-four .header-image {
+    padding-top: 50px;
+  }
+}
+.header-four .header-image img {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .header-four .header-image img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/*# sourceMappingURL=header-04.css.map */,/*===========================
+  about-04 css
+===========================*/
+.about-four {
+  background-color: var(--light-2);
+  padding-top: 90px;
+  padding-bottom: 120px;
+  position: relative;
+}
+
+.about-feature-four {
+  padding-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .about-feature-four {
+    padding: 0;
+  }
+}
+.about-feature-four .about-feature-image img {
+  width: 100%;
+}
+.about-feature-four .about-feature-content .feature-title {
+  margin-bottom: 16px;
+}
+.about-feature-four .about-feature-content .text {
+  margin-top: 8px;
+}
+
+.about-feature-items-four {
+  margin-top: 40px;
+}
+.about-feature-items-four .feature-items-icon {
+  max-width: 100px;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50%;
+  background-color: var(--white);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  color: var(--primary);
+}
+.about-feature-items-four .feature-items-content {
+  padding-left: 30px;
+}
+@media (max-width: 767px) {
+  .about-feature-items-four .feature-items-content {
+    padding-left: 0;
+    padding-top: 25px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .about-feature-items-four .feature-items-content {
+    padding-left: 30px;
+    padding-top: 0;
+  }
+}
+.about-feature-items-four .feature-items-content .text {
+  margin-top: 16px;
+}
+
+.feature-four-image {
+  padding-left: 50px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .feature-four-image {
+    padding: 0;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .feature-four-image {
+    padding: 0;
+    margin-top: 40px;
+  }
+}
+.feature-four-image img {
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=about-04.css.map */,/*===========================
+  services css 
+===========================*/
+.services-one {
+  position: relative;
+  background-color: var(--light-2);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.services-one .section-title {
+  padding-bottom: 10px;
+}
+.services-one .section-title .title {
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 55px;
+  color: var(--black);
+  margin-bottom: 16px;
+}
+@media (max-width: 767px) {
+  .services-one .section-title .title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+.services-one .section-title p {
+  color: var(--dark-3);
+}
+.services-one .services-content {
+  margin-top: 40px;
+  display: inline-block;
+}
+.services-one .services-content .services-icon {
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 12px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 35px;
+  float: left;
+  margin-right: 20px;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+.services-one .services-content:hover .services-icon {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+.services-one .services-content .media-body {
+  padding-left: 100px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .services-one .services-content .media-body {
+    padding-right: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .services-one .services-content .media-body {
+    padding-left: 0;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .services-one .services-content .media-body {
+    padding-left: 0px;
+    padding-top: 0;
+  }
+}
+.services-one .services-content .media-body .services-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--black);
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .services-one .services-content .media-body .services-title {
+    font-size: 22px;
+  }
+}
+.services-one .services-content .media-body .text {
+  color: var(--dark-3);
+  margin-top: 8px;
+}
+.services-one .services-image {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .services-one .services-image {
+    width: 35%;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .services-one .services-image {
+    width: 34%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services-one .services-image {
+    position: relative;
+    width: 720px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .services-one .services-image {
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 16px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .services-one .services-image {
+    position: relative;
+    width: 540px;
+    margin: 0 auto;
+  }
+}
+.services-one .services-image .image {
+  max-width: 400px;
+  width: 100%;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services-one .services-image .image {
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .services-one .services-image .image {
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+}
+.services-one .services-image .image img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=service-01.css.map */,/*===== FOOTER FOUR =====*/
+.footer-four {
+  background-color: var(--light-2);
+}
+.footer-four .footer-widget {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer-four .footer-widget {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .footer-four .footer-widget {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+}
+.footer-four .footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--black);
+}
+.footer-four .footer-link {
+  margin-top: 32px;
+}
+.footer-four .footer-link ul {
+  margin-top: 8px;
+}
+.footer-four .footer-link ul a {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--dark-3);
+  margin-top: 16px;
+  font-weight: 400;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+@media (max-width: 767px) {
+  .footer-four .footer-link ul a {
+    margin-top: 12px;
+  }
+}
+.footer-four .footer-link ul a:hover {
+  color: var(--primary);
+}
+.footer-four .footer-copyright {
+  padding: 20px 0;
+  border-top: 1px solid var(--gray-4);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .footer-four .footer-copyright {
+    text-align: center;
+  }
+}
+.footer-four .footer-copyright .copyright .text {
+  color: var(--black);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .footer-four .footer-copyright .copyright .text {
+    margin-bottom: 15px;
+  }
+}
+.footer-four .footer-copyright .social {
+  text-align: right;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .footer-four .footer-copyright .social {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+.footer-four .footer-copyright .social li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.footer-four .footer-copyright .social li:last-child {
+  margin-right: 0;
+}
+.footer-four .footer-copyright .social a {
+  font-size: 18px;
+  color: var(--dark-3);
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+.footer-four .footer-copyright .social a:hover {
+  color: var(--primary);
+}
+
+/*# sourceMappingURL=footer-04.css.map */</style>
   </head>
  
   <body>
- <!--====== NAVBAR TWO PART START ======-->
-<section class="navbar-area navbar-two">
+ <!--====== NAVBAR ONE PART START ======-->
+<section class="navbar-area navbar-one">
 <div class="container">
 <div class="row">
 <div class="col-lg-12">
 <nav class="navbar navbar-expand-lg">
 <a class="navbar-brand" href="javascript:void(0)">
-<img alt="Logo" src="../assets/images/logo.svg"/>
+<img alt="Logo" src="../assets/images/white-logo.svg"/>
 </a>
-<button aria-controls="navbarTwo" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarTwo" data-bs-toggle="collapse" type="button">
+<button aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarOne" data-bs-toggle="collapse" type="button">
 <span class="toggler-icon"></span>
 <span class="toggler-icon"></span>
 <span class="toggler-icon"></span>
 </button>
-<div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+<div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
 <ul class="navbar-nav m-auto">
 <li class="nav-item">
-<a aria-controls="sub-nav3" aria-expanded="false" aria-label="Toggle navigation" class="page-scroll active" data-bs-target="#sub-nav3" data-bs-toggle="collapse" href="javascript:void(0)">About
+<a aria-controls="sub-nav1" aria-expanded="false" aria-label="Toggle navigation" class="page-scroll active" data-bs-target="#sub-nav1" data-bs-toggle="collapse" href="javascript:void(0)">About
                       <div class="sub-nav-toggler">
 <span><i class="lni lni-chevron-down"></i></span>
 </div>
 </a>
-<ul class="sub-menu collapse" id="sub-nav3">
-<li><a href="javascript:void(0)">Dropdown Menu 1</a></li>
+<ul class="sub-menu collapse" id="sub-nav1">
+<li><a href="javascript:void(0)">About Us</a></li>
 <li>
-<a aria-controls="sub-nav4" aria-expanded="false" aria-label="Toggle navigation" class="page-scroll" data-bs-target="#sub-nav4" data-bs-toggle="collapse" href="javascript:void(0)">Dropdown Menu 2
+<a aria-controls="sub-nav2" aria-expanded="false" aria-label="Toggle navigation" class="page-scroll" data-bs-target="#sub-nav2" data-bs-toggle="collapse" href="javascript:void(0)">Our Portfolio
                           <div class="sub-nav-toggler">
 <span><i class="lni lni-chevron-down"></i></span>
 </div>
 </a>
-<ul class="sub-menu collapse" id="sub-nav4">
-<li><a href="javascript:void(0)">Sub menu 1</a></li>
-<li><a href="javascript:void(0)">Sub menu 2</a></li>
-<li><a href="javascript:void(0)">Sub menu 3</a></li>
+<ul class="sub-menu collapse" id="sub-nav2">
+<li>
+<a href="javascript:void(0)">Portfolio Style 1</a>
+</li>
+<li>
+<a href="javascript:void(0)">Portfolio Style 2</a>
+</li>
+<li>
+<a href="javascript:void(0)">Portfolio Style 3</a>
+</li>
 </ul>
 </li>
-<li><a href="javascript:void(0)">Dropdown Menu 3</a></li>
+<li><a href="javascript:void(0)">Our Teams</a></li>
 </ul>
 </li>
 <li class="nav-item">
@@ -413,14 +892,10 @@
 <div class="navbar-btn d-none d-sm-inline-block">
 <ul>
 <li>
-<a class="btn primary-btn square" href="javascript:void(0)">
-                      Sign In
-                    </a>
+<a class="btn primary-btn-outline" href="javascript:void(0)">Sign In</a>
 </li>
 <li>
-<a class="btn primary-btn-outline square" href="javascript:void(0)">
-                      Sign Up
-                    </a>
+<a class="btn primary-btn" href="javascript:void(0)">Sign Up</a>
 </li>
 </ul>
 </div>
@@ -432,17 +907,310 @@
 </div>
 <!-- container -->
 </section>
-<!--====== NAVBAR TWO PART ENDS ======-->
+<!--====== NAVBAR ONE PART ENDS ======-->
 <!--====== Bootstrap js ======-->
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script>
       //===== close navbar-collapse when a  clicked
-      let navbarTogglerTwo = document.querySelector(
-        ".navbar-two .navbar-toggler"
+      let navbarTogglerOne = document.querySelector(
+        ".navbar-one .navbar-toggler"
       );
-      navbarTogglerTwo.addEventListener("click", function () {
-        navbarTogglerTwo.classList.toggle("active");
+      navbarTogglerOne.addEventListener("click", function () {
+        navbarTogglerOne.classList.toggle("active");
       });
-    </script>
+    </script>,<!--====== HEADER FOUR PART START ======-->
+<section class="header-area header-four">
+<div class="header-content-area">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-6 col-md-10">
+<div class="header-content text-center">
+<h3 class="header-title">Curious to Learn More? Stay Tune</h3>
+<p class="text">
+                Stop wasting time and money designing and managing a website
+                that doesn’t get results. Happiness guaranteed!
+              </p>
+<div class="header-newsletter">
+<form action="#">
+<i class="lni lni-envelope"></i>
+<input placeholder="john@email.com" type="text"/>
+<div class="header-btn rounded-buttons">
+<button class="btn primary-btn rounded-full">
+                      SUBSCRIBE
+                    </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- row -->
+</div>
+<!-- container -->
+<div class="header-image">
+<img alt="Header" src="../assets/images/header/header-4.svg"/>
+</div>
+</div>
+<!-- header content area -->
+</section>
+<!--====== HEADER FOUR PART ENDS ======-->,<!--====== ABOUT FOUR PART START ======-->
+<section class="about-area about-four">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-12">
+<div class="about-feature-four">
+<div class="about-feature-content">
+<h2 class="feature-title fw-bold">
+                People choose us because of our service
+              </h2>
+<p class="text-lg">
+                An open platform for presentations and content collaboration.
+                Sign up to get early access.
+              </p>
+</div>
+</div>
+<!-- Start Single feature -->
+<div class="about-feature-items-four d-sm-flex">
+<div class="feature-items-icon">
+<i class="lni lni-grid-alt"></i>
+</div>
+<div class="feature-items-content media-body">
+<h4 class="items-title">Powerful templates</h4>
+<p class="text">
+                Poorly designed presentations are a thing of the past. Create
+                beautiful and high-quality content that is aligned with your
+                brand, in just a few clicks.
+              </p>
+</div>
+</div>
+<!-- End Single feature -->
+<!-- Start Single feature -->
+<div class="about-feature-items-four d-sm-flex">
+<div class="feature-items-icon">
+<i class="lni lni-paint-roller"></i>
+</div>
+<div class="feature-items-content media-body">
+<h4 class="items-title">Designed for everyone</h4>
+<p class="text">
+                Poorly designed presentations are a thing of the past. Create
+                beautiful and high-quality content that is aligned with your
+                brand, in just a few clicks.
+              </p>
+</div>
+</div>
+<!-- End Single feature -->
+</div>
+<div class="col-lg-6 col-12">
+<div class="feature-four-image">
+<div class="row">
+<div class="col-12">
+<img alt="feature-image" src="../assets/images/about/about-04/about-image.jpg"/>
+</div>
+<div class="col-lg-6 col-md-6 col-12 mt-4">
+<img alt="feature-image" src="../assets/images/about/about-04/about-image2.jpg"/>
+</div>
+<div class="col-lg-6 col-md-6 col-12 mt-4">
+<img alt="feature-image" src="../assets/images/about/about-04/about-image3.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- row -->
+</div>
+<!-- container -->
+</section>
+<!--====== ABOUT FOUR PART ENDS ======-->,<!--====== SERVICES ONE PART START ======-->
+<section class="services-area services-one">
+<div class="container">
+<div class="row">
+<div class="col-lg-6">
+<div class="section-title">
+<h4 class="title">Specializing In</h4>
+<p class="text">
+              Stop wasting time and money designing and managing a website
+              that doesn’t get results. Happiness guaranteed!
+            </p>
+</div>
+<!-- section title -->
+</div>
+</div>
+<!-- row -->
+<div class="row">
+<div class="col-lg-8">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-12">
+<div class="services-content">
+<div class="services-icon">
+<i class="lni lni-laptop"></i>
+</div>
+<div class="media-body">
+<h4 class="services-title">Graphics Design</h4>
+<p class="text">
+                    Short description for the ones who look for something new.
+                  </p>
+</div>
+</div>
+<!-- services content -->
+</div>
+<div class="col-lg-6 col-md-6 col-12">
+<div class="services-content">
+<div class="services-icon">
+<i class="lni lni-layout"></i>
+</div>
+<div class="media-body">
+<h4 class="services-title">Product Design</h4>
+<p class="text">
+                    Short description for the ones who look for something new.
+                  </p>
+</div>
+</div>
+<!-- services content -->
+</div>
+<div class="col-lg-6 col-md-6 col-12">
+<div class="services-content">
+<div class="services-icon">
+<i class="lni lni-layers"></i>
+</div>
+<div class="media-body">
+<h4 class="services-title">UI &amp; UX Design</h4>
+<p class="text">
+                    Short description for the ones who look for something new.
+                  </p>
+</div>
+</div>
+<!-- services content -->
+</div>
+<div class="col-lg-6 col-md-6 col-12">
+<div class="services-content">
+<div class="services-icon">
+<i class="lni lni-app-store"></i>
+</div>
+<div class="media-body">
+<h4 class="services-title">App Development</h4>
+<p class="text">
+                    Short description for the ones who look for something new.
+                  </p>
+</div>
+</div>
+<!-- services content -->
+</div>
+</div>
+<!-- row -->
+</div>
+</div>
+<!-- row -->
+</div>
+<!-- container -->
+<div class="services-image d-lg-flex align-items-center">
+<div class="image">
+<img alt="Services" src="../assets/images/services/strolling.svg"/>
+</div>
+</div>
+<!-- services image -->
+</section>
+<!--====== SERVICES ONE PART ENDS ======-->,<!--====== FOOTER FOUR PART START ======-->
+<footer class="footer-area footer-four">
+<div class="footer-widget">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-sm-6">
+<div class="footer-link">
+<h6 class="footer-title">Company</h6>
+<ul>
+<li><a href="javascript:void(0)">About Us</a></li>
+<li><a href="javascript:void(0)">Contact Us</a></li>
+<li><a href="javascript:void(0)">Winning Awards</a></li>
+</ul>
+</div>
+<!-- footer link -->
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="footer-link">
+<h6 class="footer-title">Solutions</h6>
+<ul>
+<li><a href="javascript:void(0)">Facilities Services</a></li>
+<li><a href="javascript:void(0)">Workplace Staffing</a></li>
+<li><a href="javascript:void(0)">Project Management</a></li>
+</ul>
+</div>
+<!-- footer link -->
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="footer-link">
+<h6 class="footer-title">Product &amp; Services</h6>
+<ul>
+<li><a href="javascript:void(0)">Products</a></li>
+<li><a href="javascript:void(0)">Business</a></li>
+<li><a href="javascript:void(0)">Developer</a></li>
+</ul>
+</div>
+<!-- footer link -->
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="footer-link">
+<h6 class="footer-title">Help &amp; Suuport</h6>
+<ul>
+<li><a href="javascript:void(0)">Support Center</a></li>
+<li><a href="javascript:void(0)">FAQ</a></li>
+<li><a href="javascript:void(0)">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+<!-- footer link -->
+</div>
+</div>
+<!-- row -->
+</div>
+<!-- container -->
+</div>
+<!-- footer widget -->
+<div class="footer-copyright">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-5">
+<div class="copyright">
+<p class="text">Copyright © 2022 UIdeck. All Rights Reserved</p>
+</div>
+<!--  copyright -->
+</div>
+<div class="col-lg-2">
+<div class="footer-logo text-center">
+<a href="javascript:void(0)">
+<img alt="Logo" src="../assets/images/footer/logo.svg"/>
+</a>
+</div>
+<!-- footer logo -->
+</div>
+<div class="col-lg-5">
+<ul class="social">
+<li>
+<a href="javascript:void(0)">
+<i class="lni lni-facebook-filled"></i>
+</a>
+</li>
+<li>
+<a href="javascript:void(0)">
+<i class="lni lni-twitter-original"></i>
+</a>
+</li>
+<li>
+<a href="javascript:void(0)">
+<i class="lni lni-instagram-filled"></i>
+</a>
+</li>
+<li>
+<a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a>
+</li>
+</ul>
+<!-- social -->
+</div>
+</div>
+<!-- row -->
+</div>
+<!-- container -->
+</div>
+<!-- footer copyright -->
+</footer>
+<!--====== FOOTER FOUR PART ENDS ======-->
   </body>
 </html>
