@@ -1,0 +1,54 @@
+<!--====== Glightbox  Css ======-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+<!-- ===== header-section start ===== -->
+<section id="home" class="header-area header-thirteen">
+   <div class="container">
+      <div class="row align-items-center">
+         <div class="col-xl-5 col-lg-6">
+            <div class="header-content-wrapper">
+               <h5>Bootstrap 5</h5>
+               <h1>Multipurpose Website Template</h1>
+               <p>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus
+                  quiblanditiis praesentium
+               </p>
+               <div class="rounded-buttons">
+                  <a href="javascript:void(0)" class="btn primary-btn rounded-full">
+                  Get Started
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="col-xl-7 col-lg-6">
+            <div class="header-img">
+               <div class="d-inline-block header-img-right">
+                  <img src="https://cdn.ayroui.com/1.0/images/header/header-13/hero-img.png" alt="" class="image" />
+                  <img src="https://cdn.ayroui.com/1.0/images/header/header-13/dots.shape.svg" alt="" class="dot-shape" />
+                  <div class="video-btn">
+                     <a href="https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM"
+                        class="glightbox">
+                     <i class="lni lni-play"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- ====== header-section end ====== -->
+
+<!--====== Glightbox js ======-->
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+      //========= glightbox
+      const videoTwo = GLightbox({
+        selector: ".glightbox",
+        type: "video",
+        source: "youtube", //vimeo, youtube or local
+        width: 900,
+        autoplayVideos: true,
+      });
+ </script>
