@@ -23,6 +23,127 @@
     <link rel="stylesheet" href="assets/css/starter.css" />
     <link rel="stylesheet" href="style.css" />
 <style>/* ===== Buttons Css ===== */
+.header-four .primary-btn {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: var(--shadow-2);
+}
+.header-four .active.primary-btn, .header-four .primary-btn:hover, .header-four .primary-btn:focus {
+  background: var(--primary-dark);
+  color: var(--white);
+  box-shadow: var(--shadow-4);
+}
+.header-four .deactive.primary-btn {
+  background: var(--gray-4);
+  color: var(--dark-3);
+  pointer-events: none;
+}
+
+/*===== HEADER FOUR =====*/
+.header-four {
+  position: relative;
+}
+.header-four .header-content-area {
+  background: -webkit-linear-gradient(#deebfd 0%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(#deebfd 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(#deebfd 0%, rgba(255, 255, 255, 0) 100%);
+}
+.header-four .header-content {
+  padding-top: 220px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .header-four .header-content {
+    padding-top: 150px;
+  }
+}
+@media (max-width: 767px) {
+  .header-four .header-content {
+    padding-top: 120px;
+  }
+}
+.header-four .header-title {
+  font-size: 44px;
+  line-height: 55px;
+  color: var(--black);
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .header-four .header-title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .header-four .header-title {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+.header-four .text {
+  color: var(--dark-3);
+  margin-top: 8px;
+}
+.header-four .header-newsletter {
+  max-width: 410px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.header-four .header-newsletter i {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  font-size: 24px;
+  color: var(--primary);
+}
+.header-four .header-newsletter input {
+  width: 100%;
+  height: 48px;
+  padding-left: 60px;
+  padding-right: 30px;
+  border-radius: 50px;
+  border: 2px solid var(--light-3);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-3);
+  padding-right: 170px;
+}
+.header-four .header-newsletter input:focus {
+  border-color: var(--primary);
+}
+.header-four .header-newsletter .header-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.header-four .header-image {
+  text-align: center;
+  padding-top: 80px;
+}
+.header-four .header-image img {
+  max-width: 700px;
+}
+@media (max-width: 767px) {
+  .header-four .header-image {
+    padding-top: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header-four .header-image {
+    padding-top: 50px;
+  }
+}
+.header-four .header-image img {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .header-four .header-image img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/*# sourceMappingURL=header-04.css.map */,/* ===== Buttons Css ===== */
 .primary-btn {
   background: var(--primary);
   color: var(--white);
@@ -356,345 +477,307 @@
   top: 0;
   opacity: 0;
   visibility: hidden;
- ,/* ===== Buttons Css ===== */
-.header-two .primary-btn {
-  background: var(--primary);
-  color: var(--white);
-  box-shadow: var(--shadow-2);
-}
-.header-two .active.primary-btn, .header-two .primary-btn:hover, .header-two .primary-btn:focus {
-  background: var(--primary-dark);
-  color: var(--white);
-  box-shadow: var(--shadow-4);
-}
-.header-two .deactive.primary-btn {
-  background: var(--gray-4);
-  color: var(--dark-3);
-  pointer-events: none;
-}
-
-/*===== HEADER TWO =====*/
-.header-two {
-  position: relative;
-}
-.header-two .header-content-area {
-  height: 700px;
-  background: var(--primary);
-  position: relative;
-  z-index: 1;
-}
-@media only screen and (min-width: 1400px) {
-  .header-two .header-content-area {
-    height: 950px;
-  }
-}
-@media (max-width: 767px) {
-  .header-two .header-content-area {
-    height: 550px;
-  }
-}
-.header-two .header-content-area::before {
-  position: absolute;
-  z-index: -1;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80%;
-  background-color: var(--white);
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 200px;
-  box-shadow: var(--shadow-4);
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .header-two .header-content-area::before {
-    height: 85%;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .header-two .header-content-area::before {
-    height: 90%;
-  }
-}
-@media (max-width: 767px) {
-  .header-two .header-content-area::before {
-    height: 90%;
-    border-bottom-right-radius: 150px;
-  }
-}
-.header-two .header-content {
-  padding-top: 95px;
-}
-.header-two .header-title {
-  font-size: 42px;
-  line-height: 55px;
-  color: var(--black);
-}
-@media (max-width: 767px) {
-  .header-two .header-title {
-    font-size: 30px;
-    line-height: 35px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .header-two .header-title {
-    font-size: 36px;
-    line-height: 45px;
-  }
-}
-.header-two .text {
-  font-size: 18px;
-  line-height: 25px;
-  color: var(--dark-3);
-  font-weight: 300;
-  margin-top: 16px;
-}
-@media (max-width: 767px) {
-  .header-two .text {
-    font-size: 16px;
-  }
-}
-.header-two .header-btn {
-  margin-top: 40px;
-}
-.header-two .header-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-}
-.header-two .image {
-  max-width: 760px;
-  margin-left: auto;
-  padding-top: 130px;
-}
-.header-two .image img {
-  width: 800px;
-}
-
-/*# sourceMappingURL=header-02.css.map */,/*===========================
-  about-03 css
+ ,/*===========================
+  about-01 css
 ===========================*/
-.about-three {
+.about-one {
   background-color: var(--light-3);
-  padding-top: 90px;
-  padding-bottom: 120px;
-}
-
-.about-feature-three .about-feature-image img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.about-feature-items-three {
-  padding-left: 50px;
-  padding-right: 100px;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .about-feature-items-three {
-    padding: 0;
-    margin-top: 30px;
-  }
-}
-@media (max-width: 767px) {
-  .about-feature-items-three {
-    padding: 0;
-    margin-top: 30px;
-  }
-}
-.about-feature-items-three ul li {
-  position: relative;
-  margin-bottom: 40px;
-}
-.about-feature-items-three ul li:last-child {
-  margin: 0;
-}
-.about-feature-items-three ul li span {
-  max-width: 45px;
-  min-width: 45px;
-  max-height: 45px;
-  min-height: 45px;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background-color: var(--primary);
-  color: var(--white);
-  position: absolute;
-  left: 0;
-  top: 0;
-  border: 3px solid transparent;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  font-size: 18px;
-}
-.about-feature-items-three ul li .content {
-  display: inline-block;
-  padding-left: 70px;
-}
-.about-feature-items-three ul li .content .list-title {
-  margin-bottom: 10px;
-}
-
-/*# sourceMappingURL=about-03.css.map */,/*===========================
-  services css 
-===========================*/
-.services-three {
-  position: relative;
-  background-color: var(--light-2);
   padding-top: 120px;
   padding-bottom: 120px;
 }
-.services-three .image {
-  border-radius: 8px;
-  overflow: hidden;
+.about-one .about-title {
+  margin-bottom: 20px;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .services-three .image {
-    margin-top: 35px;
-  }
-}
-@media (max-width: 767px) {
-  .services-three .image {
-    margin-top: 30px;
-  }
-}
-.services-three .services-content .sub-title {
-  color: var(--primary);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 18px;
-}
-.services-three .services-content .services-title {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 55px;
-  color: var(--black);
-  margin-top: 16px;
-  text-transform: capitalize;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .services-three .services-content .services-title {
-    font-size: 35px;
-    line-height: 48px;
-  }
-}
-@media (max-width: 767px) {
-  .services-three .services-content .services-title {
-    font-size: 30px;
-    line-height: 42px;
-  }
-}
-.services-three .services-content .text {
-  color: var(--dark-3);
-  line-height: 25px;
-  margin-top: 20px;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .services-three .services-content .text {
-    font-size: 18px;
-  }
-}
-@media (max-width: 767px) {
-  .services-three .services-content .text {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
-/*# sourceMappingURL=service-03.css.map */,/*===== FOOTER TWO =====*/
-.footer-two {
-  background-color: var(--light-2);
-}
-.footer-two .f-about {
+.about-one .single-about-items {
   margin-top: 30px;
-}
-.footer-two .f-about .text {
-  margin-top: 20px;
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 1400px) {
-  .footer-two .f-about {
-    padding-right: 200px;
-  }
-}
-.footer-two .footer-widget {
-  padding-top: 70px;
-  padding-bottom: 100px;
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .footer-two .footer-widget {
-    padding-top: 40px;
-    padding-bottom: 70px;
-  }
-}
-@media (max-width: 767px) {
-  .footer-two .footer-widget {
-    padding-top: 20px;
-    padding-bottom: 50px;
-  }
-}
-.footer-two .footer-title {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22px;
-  color: var(--black);
+  padding: 35px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow-2);
   position: relative;
-}
-.footer-two .footer-support {
-  padding-top: 21px;
-}
-.footer-two .footer-support span {
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--black);
-  font-weight: 500;
-  margin-top: 9px;
-  display: block;
-}
-@media (max-width: 767px) {
-  .footer-two .footer-support span {
-    display: block;
-  }
-}
-.footer-two .social {
-  padding-top: 27px;
-}
-.footer-two .social li {
-  display: inline-block;
-  margin-right: 15px;
-}
-.footer-two .social li:last-child {
-  margin-right: 0;
-}
-.footer-two .social a {
-  font-size: 18px;
-  color: var(--dark-3);
+  overflow: hidden;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
-.footer-two .social a:hover {
-  color: var(--primary);
+.about-one .single-about-items:hover {
+  box-shadow: var(--shadow-4);
 }
-.footer-two .footer-link {
+.about-one .single-about-items::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  height: 80px;
+  width: 50px;
+  border: 1px solid var(--primary);
+  border-radius: 0 0 0 30px;
+  right: -1px;
+  top: -1px;
+  opacity: 0.1;
+}
+.about-one .single-about-items::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  border: 1px solid var(--primary);
+  border-radius: 50px;
+  right: 60px;
+  top: 10px;
+  opacity: 0.1;
+}
+.about-one .single-about-items .items-icon {
+  width: 70px;
+  height: 70px;
+  line-height: 85px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--white);
+  color: var(--primary);
+  box-shadow: var(--shadow-2);
+}
+.about-one .single-about-items .items-icon i {
+  font-size: 32px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .about-one .single-about-items .items-icon {
+    max-width: 90px;
+  }
+}
+@media (max-width: 767px) {
+  .about-one .single-about-items .items-icon {
+    max-width: 80px;
+  }
+}
+.about-one .single-about-items .items-content {
   margin-top: 32px;
 }
-.footer-two .footer-link ul {
+@media only screen and (min-width: 1400px) {
+  .about-one .single-about-items .items-content {
+    padding-right: 45px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .about-one .single-about-items .items-content {
+    padding-right: 35px;
+  }
+}
+.about-one .single-about-items .items-content .items-title {
+  color: var(--black);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.about-one .single-about-items .items-content .text {
+  color: var(--dark-3);
+}
+
+/*# sourceMappingURL=about-01.css.map */,/*===========================
+  services css 
+===========================*/
+.services-four {
+  position: relative;
+  background-color: var(--light-2);
+  padding-top: 120px;
+  padding-bottom: 120px;
+  /* Section Title Six */
+}
+.services-four .section-title-six {
+  text-align: center;
+  max-width: 550px;
+  margin: auto;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 5;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services-four .section-title-six {
+    margin-bottom: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .services-four .section-title-six {
+    margin-bottom: 35px;
+  }
+}
+.services-four .section-title-six h3 {
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--primary);
+  text-transform: capitalize;
+  position: relative;
+  line-height: 14px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services-four .section-title-six h3 {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .services-four .section-title-six h3 {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+}
+.services-four .section-title-six h3::before {
+  position: absolute;
+  content: "";
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 15px;
+  background-color: var(--primary);
+  border-radius: 8px;
+}
+.services-four .section-title-six h3::after {
+  position: absolute;
+  content: "";
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 15px;
+  background-color: var(--primary);
+  border-radius: 8px;
+}
+.services-four .section-title-six h2 {
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services-four .section-title-six h2 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .services-four .section-title-six h2 {
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+  }
+}
+.services-four .section-title-six p {
+  color: var(--dark-3);
+}
+.services-four .services-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .services-four .services-image {
+    position: relative;
+    max-width: 690px;
+    width: 100%;
+    margin: 50px auto 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .services-four .services-image {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin: 50px auto 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .services-four .services-image {
+    max-width: 540px;
+  }
+}
+.services-four .services-image .image {
+  max-width: 720px;
+  margin-right: auto;
+}
+.services-four .services-image .image img {
+  width: 100%;
+}
+.services-four .single-services {
+  margin-top: 50px;
+  text-align: center;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 1400px) {
+  .services-four .single-services {
+    padding: 0 20px;
+  }
+}
+.services-four .single-services .services-icon {
+  position: relative;
+  display: inline-block;
+  height: 65px;
+  width: 65px;
+  line-height: 65px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 32px;
+  color: var(--white);
+  background-color: var(--primary);
+  z-index: 0;
+}
+.services-four .single-services .services-content {
+  margin-top: 25px;
+}
+.services-four .single-services .services-content .services-title {
+  color: var(--black);
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  font-weight: 600;
+  font-size: 24px;
+}
+.services-four .single-services .services-content .text {
+  color: var(--dark-3);
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=service-04.css.map */,/*===== FOOTER FOUR =====*/
+.footer-four {
+  background-color: var(--light-2);
+}
+.footer-four .footer-widget {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .footer-four .footer-widget {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .footer-four .footer-widget {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+}
+.footer-four .footer-title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--black);
+}
+.footer-four .footer-link {
+  margin-top: 32px;
+}
+.footer-four .footer-link ul {
   margin-top: 8px;
 }
-.footer-two .footer-link ul a {
+.footer-four .footer-link ul a {
   font-size: 16px;
   line-height: 24px;
   color: var(--dark-3);
@@ -707,30 +790,99 @@
   transition: all 0.3s ease-out 0s;
 }
 @media (max-width: 767px) {
-  .footer-two .footer-link ul a {
+  .footer-four .footer-link ul a {
     margin-top: 12px;
   }
 }
-.footer-two .footer-link ul a:hover {
+.footer-four .footer-link ul a:hover {
   color: var(--primary);
 }
-.footer-two .footer-copyright {
+.footer-four .footer-copyright {
+  padding: 20px 0;
   border-top: 1px solid var(--gray-4);
 }
-.footer-two .copyright {
-  padding-bottom: 23px;
-  padding-top: 13px;
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .footer-four .footer-copyright {
+    text-align: center;
+  }
 }
-.footer-two .copyright .text {
+.footer-four .footer-copyright .copyright .text {
+  color: var(--black);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .footer-four .footer-copyright .copyright .text {
+    margin-bottom: 15px;
+  }
+}
+.footer-four .footer-copyright .social {
+  text-align: right;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .footer-four .footer-copyright .social {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+.footer-four .footer-copyright .social li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.footer-four .footer-copyright .social li:last-child {
+  margin-right: 0;
+}
+.footer-four .footer-copyright .social a {
+  font-size: 18px;
   color: var(--dark-3);
-  margin-top: 10px;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+.footer-four .footer-copyright .social a:hover {
+  color: var(--primary);
 }
 
-/*# sourceMappingURL=footer-02.css.map */</style>
+/*# sourceMappingURL=footer-04.css.map */</style>
   </head>
  
   <body>
- <!--====== NAVBAR TWO PART START ======-->
+ <!--====== HEADER FOUR PART START ======-->
+<section class="header-area header-four">
+<div class="header-content-area">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-6 col-md-10">
+<div class="header-content text-center">
+<h3 class="header-title">Curious to Learn More? Stay Tune</h3>
+<p class="text">
+                Stop wasting time and money designing and managing a website
+                that doesn’t get results. Happiness guaranteed!
+              </p>
+<div class="header-newsletter">
+<form action="#">
+<i class="lni lni-envelope"></i>
+<input placeholder="john@email.com" type="text"/>
+<div class="header-btn rounded-buttons">
+<button class="btn primary-btn rounded-full">
+                      SUBSCRIBE
+                    </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- row -->
+</div>
+<!-- container -->
+<div class="header-image">
+<img alt="Header" src="../assets/images/header/header-4.svg"/>
+</div>
+</div>
+<!-- header content area -->
+</section>
+<!--====== HEADER FOUR PART ENDS ======-->,<!--====== NAVBAR TWO PART START ======-->
 <section class="navbar-area navbar-two">
 <div class="container">
 <div class="row">
@@ -813,172 +965,212 @@
       navbarTogglerTwo.addEventListener("click", function () {
         navbarTogglerTwo.classList.toggle("active");
       });
-    </script>,<!--====== ABOUT THREE PART START ======-->
-<section class="about-area about-three">
+    </script>,<!--====== ABOUT ONE PART START ======-->
+<section class="about-area about-one">
 <div class="container">
 <div class="row">
-<div class="col-lg-6">
-<div class="about-feature-three">
-<div class="about-feature-image">
-<img alt="About Image" src="../assets/images/about/about-03/about-3.jpg"/>
+<div class="col-lg-12">
+<div class="about-title text-center">
+<h2 class="title fw-bold">Why Choose Us</h2>
 </div>
-</div>
-<!-- about feature three -->
-</div>
-<div class="col-lg-6">
-<!-- about feature items three -->
-<div class="about-feature-items-three">
-<ul>
-<li>
-<span class="number">1</span>
-<div class="content">
-<h4 class="list-title">Easy Booking</h4>
-<p>With lots of unique blocks, you can easily build a page without coding.</p>
-</div>
-</li>
-<li>
-<span class="number">2</span>
-<div class="content">
-<h4 class="list-title">Free Expert Opinion</h4>
-<p>With lots of unique blocks, you can easily build a page without coding.</p>
-</div>
-</li>
-<li>
-<span class="number">3</span>
-<div class="content">
-<h4 class="list-title">Get Your Results</h4>
-<p>With lots of unique blocks, you can easily build a page without coding.</p>
-</div>
-</li>
-</ul>
-</div>
-<!-- End about feature items -->
 </div>
 </div>
 <!-- row -->
+<div class="row justify-content-center">
+<div class="col-md-4 col-sm-8">
+<div class="single-about-items">
+<div class="items-icon">
+<i class="lni lni-bullhorn"></i>
 </div>
-<!-- container -->
-</section>
-<!--====== ABOUT THREE PART ENDS ======-->,<!--====== HEADER TWO PART START ======-->
-<section class="header-area header-two">
-<div class="header-content-area d-flex align-items-center">
-<div class="container">
-<div class="row justify-content-lg-end">
-<div class="col-xl-5 col-lg-6 col-md-8 col-sm-10">
-<div class="header-content">
-<h3 class="header-title">Unlimited Friendly &amp; Simple Layout</h3>
+<div class="items-content">
+<h4 class="items-title">Digital Marketing</h4>
 <p class="text">
-                  Stop wasting time and money designing and managing a website
-                  that doesn’t get results. Happiness guaranteed!
+                  Short description for the ones who look for something new
                 </p>
-<div class="header-btn rounded-buttons">
-<a class="btn primary-btn rounded-full" href="javascript:void(0)">
-                    DOWNLOAD NOW
-                  </a>
 </div>
 </div>
-<!-- header content -->
+<!-- single about items -->
+</div>
+<div class="col-md-4 col-sm-8">
+<div class="single-about-items">
+<div class="items-icon">
+<i class="lni lni-investment"></i>
+</div>
+<div class="items-content">
+<h4 class="items-title">Consulting Services</h4>
+<p class="text">
+                  Short description for the ones who look for something new
+                </p>
+</div>
+</div>
+<!-- single about items -->
+</div>
+<div class="col-md-4 col-sm-8">
+<div class="single-about-items">
+<div class="items-icon">
+<i class="lni lni-handshake"></i>
+</div>
+<div class="items-content">
+<h4 class="items-title">Business Solutions</h4>
+<p class="text">
+                  Short description for the ones who look for something new
+                </p>
+</div>
+</div>
+<!-- single about items -->
 </div>
 </div>
 <!-- row -->
 </div>
 <!-- container -->
-<div class="header-image d-none d-lg-flex align-items-center">
-<div class="image">
-<img alt="Header" src="../assets/images/header/task.svg"/>
-</div>
-<!-- image -->
-</div>
-<!-- header image -->
-</div>
-<!-- header content area -->
 </section>
-<!--====== HEADER TWO PART ENDS ======-->,<!--====== SERVICES THREE PART START ======-->
-<section class="services-area services-three d-lg-flex align-items-center">
+<!--====== ABOUT ONE PART ENDS ======-->,<!--====== SERVICES FOUR PART START ======-->
+<section class="services-area services-four align-items-center">
+<!--======  Start Section Title Six ======-->
+<div class="section-title-six">
 <div class="container">
-<div class="row align-items-center">
-<div class="col-lg-6 col-12">
-<div class="services-content">
-<h5 class="sub-title">Mobile Optimization</h5>
-<h3 class="services-title">
-              The best experience on mobile possible
-            </h3>
-<p class="text">
-              By far the best fundraising experience on a mobile device,
-              whether you’re launching, customizing, managing, or
-              a campaign.
-            </p>
-<p class="text">
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable.
-            </p>
-</div>
-<!-- services content -->
-</div>
-<div class="col-lg-6 col-12">
-<div class="image">
-<img alt="Services" src="../assets/images/services/services-3.jpg"/>
+<div class="row">
+<div class="col-12">
+<div class="content">
+<h3>What we offer?</h3>
+<h2 class="fw-bold">What services we provide</h2>
+<p>There are many variations of passages of Lorem
+                Ipsum available, but the majority have suffered alteration in some form.</p>
 </div>
 </div>
 </div>
 <!-- row -->
 </div>
 <!-- container -->
+</div>
+<!--======  End Section Title Six ======-->
+<div class="container">
+<div class="row">
+<div class="col-12">
+<!-- section title -->
+<div class="row">
+<div class="col-lg-4 col-md-6 col-12">
+<div class="single-services">
+<div class="services-icon">
+<i class="lni lni-compass"></i>
+</div>
+<div class="services-content">
+<h5 class="services-title">Graphics Design</h5>
+<p class="text">
+                    Short description for the ones who look for something new.
+                  </p>
+</div>
+</div>
+<!-- single services -->
+</div>
+<div class="col-lg-4 col-md-6 col-12">
+<div class="single-services">
+<div class="services-icon">
+<i class="lni lni-flag"></i>
+</div>
+<div class="services-content">
+<h5 class="services-title">Social Media</h5>
+<p class="text">
+                    Short description for the ones who look for something new.
+                  </p>
+</div>
+</div>
+<!-- single services -->
+</div>
+<div class="col-lg-4 col-md-6 col-12">
+<div class="single-services">
+<div class="services-icon">
+<i class="lni lni-construction"></i>
+</div>
+<div class="services-content">
+<h5 class="services-title">Product Design</h5>
+<p class="text">
+                    Short description for the ones who look for something new.
+                  </p>
+</div>
+</div>
+<!-- single services -->
+</div>
+<div class="col-lg-4 col-md-6 col-12">
+<div class="single-services">
+<div class="services-icon">
+<i class="lni lni-layers"></i>
+</div>
+<div class="services-content">
+<h5 class="services-title">Product Design</h5>
+<p class="text">
+                    Short description for the ones who look for something new.
+                  </p>
+</div>
+</div>
+<!-- single services -->
+</div>
+<div class="col-lg-4 col-md-6 col-12">
+<div class="single-services">
+<div class="services-icon">
+<i class="lni lni-cup"></i>
+</div>
+<div class="services-content">
+<h5 class="services-title">UI &amp; UX Design</h5>
+<p class="text">
+                    Short description for the ones who look for something new.
+                  </p>
+</div>
+</div>
+<!-- single services -->
+</div>
+<div class="col-lg-4 col-md-6 col-12">
+<div class="single-services">
+<div class="services-icon">
+<i class="lni lni-network"></i>
+</div>
+<div class="services-content">
+<h5 class="services-title">Team Management</h5>
+<p class="text">
+                    Short description for the ones who look for something new.
+                  </p>
+</div>
+</div>
+<!-- single services -->
+</div>
+</div>
+<!-- row -->
+</div>
+</div>
+<!-- row -->
+</div>
+<!-- container -->
 </section>
-<!--====== SERVICES THREE PART ENDS ======-->,<!--====== FOOTER TWO PART START ======-->
-<footer class="footer-area footer-two">
+<!--====== SERVICES FOUR PART ENDS ======-->,<!--====== FOOTER FOUR PART START ======-->
+<footer class="footer-area footer-four">
 <div class="footer-widget">
 <div class="container">
 <div class="row">
-<div class="col-xl-6 col-lg-4 col-sm-12">
-<div class="f-about">
-<div class="footer-logo">
-<a href="javascript:void(0)">
-<img alt="Logo" src="../assets/images/footer/logo.svg"/>
-</a>
-</div>
-<p class="text">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </p>
-<ul class="social">
-<li>
-<a href="javascript:void(0)">
-<i class="lni lni-facebook-filled"></i>
-</a>
-</li>
-<li>
-<a href="javascript:void(0)">
-<i class="lni lni-twitter-original"></i>
-</a>
-</li>
-<li>
-<a href="javascript:void(0)">
-<i class="lni lni-instagram-filled"></i>
-</a>
-</li>
-<li>
-<a href="javascript:void(0)">
-<i class="lni lni-linkedin-original"></i>
-</a>
-</li>
-</ul>
-</div>
-</div>
-<div class="col-xl-2 col-lg-2 col-sm-4">
+<div class="col-lg-3 col-sm-6">
 <div class="footer-link">
 <h6 class="footer-title">Company</h6>
 <ul>
-<li><a href="javascript:void(0)">About</a></li>
-<li><a href="javascript:void(0)">Contact</a></li>
-<li><a href="javascript:void(0)">Marketing</a></li>
+<li><a href="javascript:void(0)">About Us</a></li>
+<li><a href="javascript:void(0)">Contact Us</a></li>
+<li><a href="javascript:void(0)">Winning Awards</a></li>
 </ul>
 </div>
 <!-- footer link -->
 </div>
-<div class="col-xl-2 col-lg-3 col-sm-4">
+<div class="col-lg-3 col-sm-6">
 <div class="footer-link">
-<h6 class="footer-title">Services</h6>
+<h6 class="footer-title">Solutions</h6>
+<ul>
+<li><a href="javascript:void(0)">Facilities Services</a></li>
+<li><a href="javascript:void(0)">Workplace Staffing</a></li>
+<li><a href="javascript:void(0)">Project Management</a></li>
+</ul>
+</div>
+<!-- footer link -->
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="footer-link">
+<h6 class="footer-title">Product &amp; Services</h6>
 <ul>
 <li><a href="javascript:void(0)">Products</a></li>
 <li><a href="javascript:void(0)">Business</a></li>
@@ -987,7 +1179,7 @@
 </div>
 <!-- footer link -->
 </div>
-<div class="col-xl-2 col-lg-3 col-sm-4">
+<div class="col-lg-3 col-sm-6">
 <div class="footer-link">
 <h6 class="footer-title">Help &amp; Suuport</h6>
 <ul>
@@ -1006,12 +1198,43 @@
 <!-- footer widget -->
 <div class="footer-copyright">
 <div class="container">
-<div class="row">
-<div class="col-lg-12">
-<div class="copyright text-center">
+<div class="row align-items-center">
+<div class="col-lg-5">
+<div class="copyright">
 <p class="text">Copyright © 2022 UIdeck. All Rights Reserved</p>
 </div>
-<!-- copyright -->
+<!--  copyright -->
+</div>
+<div class="col-lg-2">
+<div class="footer-logo text-center">
+<a href="javascript:void(0)">
+<img alt="Logo" src="../assets/images/footer/logo.svg"/>
+</a>
+</div>
+<!-- footer logo -->
+</div>
+<div class="col-lg-5">
+<ul class="social">
+<li>
+<a href="javascript:void(0)">
+<i class="lni lni-facebook-filled"></i>
+</a>
+</li>
+<li>
+<a href="javascript:void(0)">
+<i class="lni lni-twitter-original"></i>
+</a>
+</li>
+<li>
+<a href="javascript:void(0)">
+<i class="lni lni-instagram-filled"></i>
+</a>
+</li>
+<li>
+<a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a>
+</li>
+</ul>
+<!-- social -->
 </div>
 </div>
 <!-- row -->
@@ -1020,6 +1243,6 @@
 </div>
 <!-- footer copyright -->
 </footer>
-<!--====== FOOTER TWO PART ENDS ======-->
+<!--====== FOOTER FOUR PART ENDS ======-->
   </body>
 </html>
